@@ -1,6 +1,7 @@
 {
     "name": "api-client-darsky/darksky-client",
     "description": "Dark sky simple api client",
+    "homepage": "https://github.com/jorgik1/darksky-client",
     "type": "library",
     "require": {
         "php": "^7.1",
