@@ -11,11 +11,18 @@
     "api-clients/middleware-user-agent": "^1.0"
   },
   "require-dev": {
-    "api-clients/resource-generator": "dev-master"
+    "api-clients/resource-generator": "dev-master",
+    "api-clients/resource-test-utilities": "^1.0",
+    "api-clients/test-utilities": "^4.3"
   },
   "autoload": {
     "psr-4": {
       "ApiClients\\Client\\DarkSkyClient\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ApiClients\\Tests\\Client\\DarkSkyClient\\": "tests/"
     }
   },
   "license": "MIT",

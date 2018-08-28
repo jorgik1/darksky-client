@@ -8,7 +8,7 @@ use ApiClients\Foundation\Factory;
 use React\EventLoop\LoopInterface;
 use React\Promise\PromiseInterface;
 
-final class AsyncClient
+final class AsyncClient implements AsyncClientInterface
 {
 
     /**
