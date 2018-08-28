@@ -9,8 +9,8 @@ $loop = Factory::create();
 $latitude = '37.8267';
 $longitude = '-122.4233';
 $client = AsyncClient::create($loop, require 'resolve_token.php');
-$client->fetch( $latitude, $longitude)
-  ->done(function (ApiClients\Client\DarkSkyClient\Resource\ResponseInterface $response) {
-    resource_pretty_print($response);
-  });
+$client->fetch($latitude, $longitude)
+    ->done(function (ApiClients\Client\DarkSkyClient\Resource\ResponseInterface $response) {
+        resource_pretty_print($response);
+    });
 $loop->run();

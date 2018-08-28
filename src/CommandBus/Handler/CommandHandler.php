@@ -9,32 +9,35 @@ use ApiClients\Tools\Services\Client\FetchAndHydrateService;
 use ApiClients\Client\DarkSkyClient\Resource\Async\CurrentlyInterface;
 use React\Promise\PromiseInterface;
 
-final class CommandHandler {
+final class CommandHandler
+{
 
-  /**
-   * @var FetchAndHydrateService
-   */
-  private $service;
+    /**
+     * @var FetchAndHydrateService
+     */
+    private $service;
 
-  /**
-   * @param FetchAndHydrateService $service
-   */
-  public function __construct(FetchAndHydrateService $service) {
-    $this->service = $service;
-  }
+    /**
+     * @param FetchAndHydrateService $service
+     */
+    public function __construct(FetchAndHydrateService $service)
+    {
+        $this->service = $service;
+    }
 
-  /**
-   * Fetch the given repository and hydrate it
-   *
-   * @param Command $command
-   *
-   * @return PromiseInterface
-   */
-  public function handle(Command $command): PromiseInterface {
-    return $this->service->fetch(
-       $command->getLocation(),
-      '',
-      ResponseInterface::HYDRATE_CLASS
-    );
-  }
+    /**
+     * Fetch the given repository and hydrate it
+     *
+     * @param Command $command
+     *
+     * @return PromiseInterface
+     */
+    public function handle(Command $command): PromiseInterface
+    {
+        return $this->service->fetch(
+            $command->getLocation(),
+            '',
+            ResponseInterface::HYDRATE_CLASS
+        );
+    }
 }

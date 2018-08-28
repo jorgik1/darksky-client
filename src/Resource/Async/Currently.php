@@ -15,80 +15,92 @@ use React\HttpClient\Response;
  * )
  * @EmptyResource("EmptyResponse")
  */
-class Currently extends AbstractResource implements CurrentlyInterface {
+class Currently extends AbstractResource implements CurrentlyInterface
+{
 
-  protected $time;
+    protected $time;
 
-  protected $summary;
+    protected $summary;
 
-  protected $icon;
+    protected $icon;
 
-  protected $nearestStormDistance;
+    protected $nearestStormDistance;
 
-  protected $nearestStormBearing;
+    protected $nearestStormBearing;
 
-  protected $temperature;
+    protected $temperature;
 
-  protected $apparentTemperature;
+    protected $apparentTemperature;
 
-  protected $pressure;
+    protected $pressure;
 
-  protected $windSpeed;
+    protected $windSpeed;
 
-  protected $cloudCover;
+    protected $cloudCover;
 
 
-  /**
-   * @return \ApiClients\Client\DarkSkyClient\Resource\Async\Time
-   */
-  public function time(): Time {
-    return $this->time;
-  }
+    /**
+     * @return \ApiClients\Client\DarkSkyClient\Resource\Async\Time
+     */
+    public function time(): Time
+    {
+        return $this->time;
+    }
 
-  /**
-   * @return Currently\Summary
-   */
-  public function summary(): Currently\Summary {
-    return $this->summary;
-  }
+    /**
+     * @return Currently\Summary
+     */
+    public function summary(): Currently\Summary
+    {
+        return $this->summary;
+    }
 
-  public function icon(): string {
-    return $this->icon;
-  }
+    public function icon(): string
+    {
+        return $this->icon;
+    }
 
-  public function nearestStormDistance(): int {
-    return $this->nearestStormDistance;
-  }
+    public function nearestStormDistance(): int
+    {
+        return $this->nearestStormDistance;
+    }
 
-  public function nearestStormBearing(): int {
-    $this->nearestStormBearing;
-  }
+    public function nearestStormBearing(): int
+    {
+        $this->nearestStormBearing;
+    }
 
-  public function temperature(): int {
-    return $this->temperature;
-  }
+    public function temperature(): int
+    {
+        return $this->temperature;
+    }
 
-  public function apparentTemperature(): int {
-    return $this->apparentTemperature;
-  }
+    public function apparentTemperature(): int
+    {
+        return $this->apparentTemperature;
+    }
 
-  public function pressure(): int {
-    return $this->pressure;
-  }
+    public function pressure(): int
+    {
+        return $this->pressure;
+    }
 
-  public function windSpeed(): int {
-    return $this->windSpeed;
-  }
+    public function windSpeed(): int
+    {
+        return $this->windSpeed;
+    }
 
-  public function cloudCover(): int {
-    return $this->cloudCover;
-  }
+    public function cloudCover(): int
+    {
+        return $this->cloudCover;
+    }
 
-  /**
-   * @return mixed
-   */
-  public function getIcon() {
-    return $this->icon;
-  }
+    /**
+     * @return mixed
+     */
+    public function getIcon()
+    {
+        return $this->icon;
+    }
 
 }

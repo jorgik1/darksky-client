@@ -11,5 +11,6 @@ namespace ApiClients\Client\DarkSkyClient\Resource\Async;
 use ApiClients\Foundation\Resource\EmptyResourceInterface;
 use EmptyResponseInreface;
 
-abstract class EmptyResponse implements EmptyResponseInreface, EmptyResourceInterface {
+abstract class EmptyResponse implements EmptyResponseInreface, EmptyResourceInterface
+{
 }

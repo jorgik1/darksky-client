@@ -14,17 +14,19 @@ use ApiClients\Foundation\Hydrator\Annotation\Nested;
  * )
  * @EmptyResource("EmptyResponse")
  */
-class BaseResponse extends AbstractResponse implements ResponseInterface {
+class BaseResponse extends AbstractResponse implements ResponseInterface
+{
 
-  /**
-   * @var Currently
-   */
-  public $currently;
+    /**
+     * @var Currently
+     */
+    public $currently;
 
-  /**
-   * @return \ApiClients\Client\DarkSkyClient\Resource\Async\Currently
-   */
-  public function currently(): Currently {
-    return $this->currently;
-  }
+    /**
+     * @return \ApiClients\Client\DarkSkyClient\Resource\Async\Currently
+     */
+    public function currently(): Currently
+    {
+        return $this->currently;
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace ApiClients\Client\DarkSkyClient\Exception;
 
-class DarkskyException extends \Exception {
+class DarkskyException extends \Exception
+{
 
 }

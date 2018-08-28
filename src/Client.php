@@ -7,35 +7,38 @@ use React\EventLoop\Factory;
 use React\EventLoop\LoopInterface;
 use function Clue\React\Block\await;
 
-final class Client {
+final class Client
+{
 
-  /**
-   * @var LoopInterface
-   */
-  private $loop;
+    /**
+     * @var LoopInterface
+     */
+    private $loop;
 
-  /**
-   * @var AsyncClient
-   */
-  private $client;
+    /**
+     * @var AsyncClient
+     */
+    private $client;
 
-  public function __construct(string $token) {
-    $this->loop = Factory::create();
-    $this->client = AsyncClient::create($this->loop, $token);
-  }
+    public function __construct(string $token)
+    {
+        $this->loop = Factory::create();
+        $this->client = AsyncClient::create($this->loop, $token);
+    }
 
-  /**
-   * @param string $latitude
-   * @param string $longitude
-   *
-   * @return
-   * @throws \Exception
-   */
-  public function fetch(string $latitude, string $longitude) {
-    return await(
-      $this->client->fetch($latitude, $longitude),
-      $this->loop
-    );
-  }
+    /**
+     * @param string $latitude
+     * @param string $longitude
+     *
+     * @return
+     * @throws \Exception
+     */
+    public function fetch(string $latitude, string $longitude)
+    {
+        return await(
+            $this->client->fetch($latitude, $longitude),
+            $this->loop
+        );
+    }
 
 }

@@ -2,9 +2,10 @@
 
 use ApiClients\Foundation\Resource\ResourceInterface;
 
-interface EmptyResponseInreface extends ResourceInterface {
+interface EmptyResponseInreface extends ResourceInterface
+{
 
-  const HYDRATE_CLASS = 'EmptyResponse';
+    const HYDRATE_CLASS = 'EmptyResponse';
 
-  public function timezone(): string;
+    public function timezone(): string;
 }
