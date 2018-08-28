@@ -2,7 +2,6 @@
 
 namespace ApiClients\Client\DarkSkyClient;
 
-use ApiClients\Client\DarkSkyClient\Resource\Response;
 use React\EventLoop\Factory;
 use React\EventLoop\LoopInterface;
 use function Clue\React\Block\await;
