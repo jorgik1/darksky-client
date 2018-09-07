@@ -1,4 +1,6 @@
 # Darksky
+![](https://sonarcloud.io/api/project_badges/measure?project=jorgik1_darksky-client&metric=alert_status)
+
 A simple async client for <a href=https://darksky.net>Dark Sky API</a>
 
 ## Server Requirements
